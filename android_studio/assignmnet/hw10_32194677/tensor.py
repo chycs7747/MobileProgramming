@@ -24,6 +24,16 @@ history = model.fit(X_train, Y_train, batch_size=10, epochs=60, validation_split
 loss, accuracy = model.evaluate(X_test, Y_test)
 
 
+
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['val_accuracy'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['training', 'validation'], loc='best')
+plt.show()
+
+'''
 plt.plot(history.history['loss'])
 plt.plot(history.history['val_loss'])
 plt.title('model loss')
@@ -31,3 +41,4 @@ plt.ylabel('loss')
 plt.xlabel('epoch')
 plt.legend(['training', 'validation'], loc='best')
 plt.show()
+'''
